@@ -1,0 +1,125 @@
+<!DOCTYPE html> 
+<html lang="pt-BR"> 
+<head> 
+  <meta charset="UTF-8"> 
+  <!-- sem esta linha, o celular finge ser tela grande e a media query não funciona --> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>João Pedro — Portfólio</title> 
+  <link rel="stylesheet" href="style.css"> 
+  <!-- defer: o script roda depois que o HTML inteiro carregou --> 
+  <script src="script.js" defer></script> 
+</head> 
+<body> 
+  <header> 
+    <div class="container">
+      <a href="#inicio" class="marca">jp-freitas</a>   <!-- nome pequeno; o h1 fica no Início --> 
+      <!-- botão do menu: só aparece no celular (ver CSS) --> 
+      <button type="button" id="btn-menu" aria-expanded="false">Menu</button> 
+      <nav id="menu"> 
+        <a href="#sobre">Sobre</a> 
+        <a href="#habilidades">Habilidades</a> 
+        <a href="#projetos">Projetos</a> 
+        <a href="#contato">Contato</a> 
+      </nav> 
+    </div>
+  </header> 
+  <main> 
+    <div class="container">
+      <section id="inicio" class="hero"> 
+        <div> 
+          <p class="greetings">Olá, eu sou</p> 
+          <h1>João Pedro Freitas</h1> 
+          <p class="area">Engenheiro de Software</p> 
+          <p>Atuo na criação da solução de prolemas desde a arquitetura até a escalabilidade.</p> 
+          <a class="button" href="#projetos">Ver projetos</a> 
+          <!-- sem currículo em PDF (sem telefone e endereço!), o botão leva ao Contato --> 
+          <a class="sec-button" href="#contato">Baixar currículo</a> 
+        </div> 
+        <img src="img/avatar.jpeg" alt="Foto de João Pedro de perfil."> 
+      </section> 
+      <section id="sobre">
+        <img src="img/sobre.jpeg" class="image" alt="Foto de João Pedro de perfil."> 
+        <div>
+          <h2>Sobre mim</h2> 
+          <p>Pós graduado em Engenharia de Software - Atuo como Instrutor Profissional em Desenvolvimento de Sistemas no SENAI de Itumbiara.</p> 
+          <p><strong>Localização:</strong> Itumbiara / GO</p>   <!-- cidade basta --> 
+          <p><strong>Formação:</strong> Pós-Graduação em Engenharia de Software / FAMEF</p> 
+          <p><strong>Interesses:</strong> Banco de Dados, Javascript, Python, Testes e IA</p>
+        </div>
+      </section> 
+      <section id="habilidades"> 
+        <h2>Habilidades</h2> 
+        <ul class="habilidades"> 
+          <li><img src="img/html-5.png" alt="Logo HTML5"></li> 
+          <li><img src="img/css-3.png" alt="Logo CSS3"></li>
+          <li><img src="img/js.png" alt="Logo JS"></li>
+          <li><img src="img/react.png" alt="Logo React"></li>
+          <li><img src="img/Next.js.png" alt="Logo NextJS"></li>
+          <li><img src="img/python.png" alt="Logo Python"></li>
+          <li><img src="img/sql-server.png" alt="Logo PL/SQL"></li>
+          <li><img src="img/git.png" alt="Logo Git"></li>
+        </ul> 
+      </section> 
+      <section id="projetos"> 
+        <h2>Projetos</h2> 
+        <div class="cartoes"> 
+          <article class="cartao"> 
+            <img class="img" src="img/todo_2.png" alt="Imagem do site de controle de tarefas.">
+            <div class="details">
+              <h3>todo</h3> 
+              <p>Site para controlar tarefas a serem realizadas.</p> 
+              <p class="tags"><span>HTML</span> · <span>CSS</span> · <span>JS</span></p> 
+              <a href="https://jp-freitas-todo.vercel.app/">Ver projeto →</a> 
+              <a href="https://github.com/jp-freitas/todo-app">Código →</a>
+            </div> 
+          </article> 
+          <article class="cartao"> 
+            <img class="img" src="img/controle_estoque.png" alt="Imagem do site de controle de tarefas.">
+            <div class="details">
+              <h3>Controle de Inventário</h3> 
+              <p>Site para controlar estoque, registrar entrada e saída.</p> 
+              <p class="tags"><span>React</span> · <span>NextJS</span> · <span>IA</span> · <span>Supabase</span></p> 
+              <a href="https://controle-estoque-seven-self.vercel.app/">Ver projeto →</a> 
+              <a href="https://github.com/jp-freitas/controle-estoque">Código →</a>
+            </div>  
+          </article> 
+          <article class="cartao"> 
+            <img class="img" src="img/calculadora_ygp.png" alt="Imagem do site de controle de tarefas.">
+            <div class="details">
+              <h3>Calculadora Yu-Gi-Oh</h3> 
+              <p>Calculadora de pontos de vida com timer.</p> 
+              <p class="tags"><span>React</span></p> 
+              <a href="https://ygo-calculator-web.vercel.app/">Ver projeto →</a> 
+              <a href="https://github.com/jp-freitas/ygo-calculator-web">Código →</a>
+            </div>  
+          </article> 
+        </div> 
+      </section> 
+      <section id="contato"> 
+        <div class="detalhes">
+          <h2>Vamos conversar?</h2> 
+          <p>Quer conversar sobre Tecnologia? Quer resolver um problema? Quer orçar um freela ou parceria? </p> 
+          <p><strong>Email: </strong><a href="mailto:tec.joao.freitas@gmail.com" target="_blank">tec.joao.freitas@gmail.com</a></p> 
+          <p><strong>LinkedIn: </strong><a href="" target="_blank">https://www.linkedin.com/in/tec-joao-freitas/</a></p>
+          <p><strong>GitHub: </strong><a href="https://github.com/jp-freitas" target="_blank">github.com/jp-freitas</a></p>
+        </div>
+        <form id="form-contato"> 
+          <label for="nome">Nome</label> 
+          <input id="nome" name="nome" required> 
+          <label for="email">E-mail</label> 
+          <input id="email" name="email" type="email" required> 
+          <label for="mensagem">Mensagem</label> 
+          <textarea id="mensagem" name="mensagem" required></textarea> 
+          <button type="submit">Enviar mensagem</button> 
+          <p id="aviso" aria-live="polite"></p>   <!-- a confirmação aparece aqui --> 
+        </form> 
+      </section> 
+    </div>
+  </main> 
+  <footer>
+    <div class="container">
+      © 2026 jp-freitas. Feito com HTML, CSS e JavaScript.
+    </div>
+  </footer> 
+</body> 
+</html>

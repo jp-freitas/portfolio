@@ -1,0 +1,298 @@
+:root {                                   /* identidade visual em variáveis */ 
+  --cor-principal: #18181b; 
+  --cor-fundo: #F7F9F6;
+  --font-pri: #1C1917; 
+  --font-greetings: #52525B;
+  --font-area: #3F3F46;
+} 
+
+body {
+  font-family: Arial, sans-serif; 
+  background: var(--cor-fundo); 
+  margin: 0;
+} 
+
+header, main, footer { 
+  padding: 64px 0; 
+} 
+
+h1, h2 { 
+  color: var(--font-pri); 
+} 
+
+
+.button { 
+  cursor: pointer;
+  text-decoration: none;
+  border: 1px solid transparent; 
+  background: none; 
+  border-radius: 4px;
+  display: inline-flex; 
+  padding: 10px 24px; 
+  color: #fff;
+  background: var(--cor-principal);
+  margin-right: 8px;
+}
+
+.button:hover { 
+  background: #fff;
+  color: var(--cor-principal);
+  border: 1px solid var(--cor-principal);
+}
+
+.sec-button { 
+  background: #fff; 
+  color: var(--cor-principal); 
+  border: 1px solid; 
+  cursor: pointer;
+  text-decoration: none;
+  background: none; 
+  border-radius: 4px;
+  display: inline-flex; 
+  padding: 10px 24px;
+}
+
+.sec-button:hover { 
+  background: var(--cor-principal);
+  color: #fff;
+  border: none;
+}
+
+/* celular primeiro: menu escondido, aberto pelo botão */
+
+header { 
+  padding: 32px 0;
+}
+
+header .container {
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center;
+  height: 44px;
+}
+
+nav { 
+  display: none; 
+  flex-direction: column; 
+  gap: 28px;
+} 
+
+nav a { 
+  text-decoration: none; 
+  color: var(--font-pri); 
+  font-weight: 600;
+  border-bottom: 3px solid transparent;
+}
+
+nav a:hover { 
+  border-bottom: 3px solid var(--cor-principal);
+  color: var(--cor-principal); 
+}
+
+nav.aberto { 
+  display: flex; 
+}              /* a classe que o JavaScript liga e desliga */ 
+
+#btn-menu { 
+  min-height: 44px; 
+} 
+
+.container { 
+  max-width: 1100px; 
+  margin: 0 auto; 
+}
+
+ 
+
+.marca { 
+  font-weight: bold; 
+  font-size: 20px;
+  color: var(--font-pri); 
+  text-decoration: none; 
+} 
+
+#inicio {
+  
+  padding: 64px 0;
+}
+
+.hero { 
+  display: flex; 
+  flex-direction: column;
+  gap: 16px;
+}
+
+.hero .greetings { 
+  color: var(--font-greetings);
+  font-size: 20px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.hero .area { 
+  color: var(--font-area); 
+  font-weight: semi-bold;
+  font-size: 20px;
+}
+
+.hero p {
+  color: var(--font-pri); 
+  font-size: 20px;
+}
+
+/* celular: uma coluna */ 
+
+.hero img { 
+  width: 360px;
+  height: 340px; 
+  border-radius: 50%; 
+} 
+
+#sobre { 
+  display: flex; 
+  flex-direction: row; 
+  padding: 64px 0;
+}
+
+#sobre .image {
+  width: 380px;
+  height: 380px;
+  border-radius: 12px;
+  margin-right: 56px;
+}
+
+#sobre h2 { 
+  font-size: 36px; 
+  font-weight: bold; 
+  margin-bottom: 18px;
+}
+
+#sobre p { 
+  font-size: 20px; 
+  color: var(--font-pri); 
+  line-height: 1.5;
+}
+
+#habilidades { 
+  display: flex; 
+  flex-direction: column; 
+  padding: 64px 0;
+  gap: 16px;
+}
+
+#habilidades h2 { 
+  font-size: 36px; 
+  font-weight: bold; 
+  margin-bottom: 18px;
+}
+
+.habilidades { 
+  display: flex; 
+  flex-wrap: wrap; 
+  gap: 8px; 
+  list-style: none; 
+  padding: 0;
+} 
+
+.habilidades img { 
+  width: 120px; 
+  height: 120px;
+  padding: 5px;
+}
+
+#projetos { 
+  display: flex; 
+  flex-direction: column; 
+  padding: 64px 0;
+  gap: 16px;
+}
+
+#projetos h2 { 
+  font-size: 36px; 
+  font-weight: bold; 
+  margin-bottom: 18px;
+}
+
+.cartoes { 
+  display: grid; 
+  grid-template-columns: 1fr; 
+  gap: 16px;  
+}   /* 1 coluna */ 
+
+.cartao { 
+  background: #fff; 
+  border-radius: 14px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.cartao .img { 
+  width: 100%; 
+  height: 200px; 
+  object-fit: cover; 
+  border-radius: 14px 14px 0px 0px;
+}
+
+.cartao .details { 
+  padding: 0px 20px 20px 20px; 
+}
+
+.cartao .details p {
+  color: var(--font-greetings); 
+  font-size: 20px;
+}
+
+.cartao .details a { 
+  text-decoration: underline; 
+  color: var(--font-pri); 
+  border-bottom: 3px solid transparent;
+  padding-right: 8px;
+}
+
+#contato { 
+  display: flex; 
+  flex-direction: row; 
+  justify-content: space-between;
+  padding: 64px 0;
+  gap: 16px;
+}
+
+#contato h2 { 
+  font-size: 36px; 
+  font-weight: bold; 
+  margin-bottom: 18px;
+}
+
+#contato form { 
+  display: flex; 
+  flex-direction: column; 
+  gap: 16px; 
+  max-width: 620px; 
+  margin-top: 48px;
+}
+
+form { 
+  display: flex; 
+  flex-direction: column; 
+  gap: 6px; 
+  max-width: 420px; 
+} 
+
+footer {
+  padding: 16px 0;
+}
+/* telas a partir de 768 px: menu sempre visível e 3 colunas */ 
+
+@media (min-width: 768px) { 
+
+  #btn-menu { display: none; } 
+
+  nav { display: flex; flex-direction: row; } 
+
+  .cartoes { grid-template-columns: repeat(3, 1fr); } 
+
+  .hero { flex-direction: row; justify-content: space-between; align-items: center; } 
+
+}
